@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="StylesheetShop.css">
-  <title>Valatria</title>
+  <link rel="stylesheet" type="text/css" href="design/StylesheetShop.css">
+  <title>Waffle</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -10,7 +10,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="design/favicon.png" />
 
 
 
@@ -21,16 +21,16 @@
 <body>
 
   <header>
-      <img src="banner.png" alt="Banniere">
+      <img src="design/banner.png" alt="Banniere">
 
 
       <div class="navbar">
           <ul>
-            <li><a href="Valatria.html">Home</a></li>
+            <li><a href="Waffle.view.php">Home</a></li>
             <li><a href="#" aria-haspopup="true">Shop</a>
               <ul class="dropdown" aria-label="submenu">
                 <li><a href="#">Tractors</a></li>
-                <li><a href="Kitform.html">Kitform</a></li>
+                <li><a href="Kitform.view.php">Kitform</a></li>
               </ul>
             </li>
             <li><a href="https://valatria.createaforum.com/">Forum</a></li>
@@ -38,7 +38,7 @@
       </div>
   </header>
 
-  <button onclick="window.location.href = 'Login.html';" class="LOGIN" type="button" name="button">LOGIN </button>
+  <button onclick="window.location.href = 'Login.view.php';" class="LOGIN" type="button" name="button">LOGIN </button>
 
 
 
@@ -50,7 +50,7 @@
   <div class="liste">
 
     <div class="article">
-      <img src="article1.jpg" alt="Tractor image">
+      <img src="design/article1.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>Deutz-Fahr AGROTRON 180.7</h1>
@@ -58,14 +58,13 @@
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="button_cont" align="center">
-            <a class="example_d" href="#" >Order now</a>
-            <a class="example_d" href="perso1.html" >Personalize</a>
+            <a class="example_d" href="#" >Ajouter au panier</a>
           </div>
       </div>
     </div>
 
     <div class="article">
-      <img src="article2.jpg" alt="Tractor image">
+      <img src="design/article2.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>Valmet 8150 DELTA POWERSHIFT</h1>
@@ -73,14 +72,13 @@
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="button_cont" align="center">
-            <a class="example_d" href="#" >Order now</a>
-            <a class="example_d" href="perso1.html" >Personalize</a>
+            <a class="example_d" href="#" >Ajouter au panier</a>
           </div>
       </div>
     </div>
 
     <div class="article">
-      <img src="article3.jpg" alt="Tractor image">
+      <img src="design/article3.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>John Deere7230 R</h1>
@@ -88,14 +86,13 @@
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="button_cont" align="center">
-            <a class="example_d" href="#" >Order now</a>
-            <a class="example_d" href="perso1.html" >Personalize</a>
+            <a class="example_d" href="#" >Ajouter au panier</a>
           </div>
       </div>
     </div>
 
     <div class="article">
-      <img src="article4.jpg" alt="Tractor image">
+      <img src="design/article4.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>Valtra T214 DIRECT</h1>
@@ -103,33 +100,32 @@
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="button_cont" align="center">
-            <a class="example_d" href="#" >Order now</a>
-            <a class="example_d" href="perso1.html" >Personalize</a>
+            <a class="example_d" href="#" >Ajouter au panier</a>
          </div>
       </div>
     </div>
 
     <div class="article" id="outoforder">
-      <img src="article5.jpg" alt="Tractor image">
+      <img src="design/article5.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>Case IH MXU 100</h1>
             <p>22 000 €</p>
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="button_cont" align="center"><a class="example_e" href="#" >Out Of Stock</a></div>
+          <div class="button_cont" align="center"><a class="example_e" href="#" >Article indisponible</a></div>
       </div>
     </div>
 
     <div class="article" id="outoforder">
-      <img src="article6.jpg" alt="Tractor image">
+      <img src="design/article6.jpg" alt="Tractor image">
       <div>
           <div class="header">
             <h1>Case IH CVX1155</h1>
             <p>32 000 €</p>
           </div>
           <p><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="button_cont" align="center"><a class="example_e" href="#" >Out Of Stock</a></div>
+          <div class="button_cont" align="center"><a class="example_e" href="#" >Article indisponible</a></div>
       </div>
     </div>
 
@@ -165,15 +161,15 @@
     <div class="footer">
 
       <ul>
-        <li><a href="AboutUs.html">About us </a></li>
-        <li><a href="Feedback.html">Feedback</a></li>
+        <li><a href="AboutUs.view.php">About us </a></li>
+        <li><a href="feedback.view.php">Feedback</a></li>
       </ul>
 
     <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
     <a href="https://twitter.com/" class="fa fa-twitter"></a>
     <a href="https://fr.linkedin.com/" class="fa fa-linkedin"></a>
     <a href="#" class="fa fa-instagram"></a>
-      <p>Copyright@TheGreenValatriaCompany 2019</p>
+      <p>Copyright@TheWaffleProject-2020</p>
 
     </div>
 
