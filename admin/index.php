@@ -1,13 +1,16 @@
 <!--pour avoir une feuille de style il faudra faire un link -->
+<link rel="stylesheet" type="text/css" href="../vue/design/Login.css">
+<link rel="icon" type="image/png" href="../vue/design/Favicon.png" />
+
 <h1>
     Essaye de te connecter :
 </h1>
 
 <form action="connexion.php" method="post">
 
-  <label for="id">Email:</label>
-  <input type="email" name="id" id="id" required/><br/><br/>
-  <label for="mdp">Mot de passe:</label>
-  <input type="password" name="mdp" id="mdp" required/><br/><br/>
-  <input type="submit" value="Connexion" />
+  <label for="uname">Email:</label>
+  <input type="email" name="uname" id="uname" required/><br/><br/>
+  <label for="psw">Mot de passe:</label>
+  <input type="password" name="psw" id="psw" required/><br/><br/>
+  <button type="submit">Se connecter</button>
 </form>

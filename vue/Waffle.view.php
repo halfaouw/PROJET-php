@@ -11,7 +11,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="icon" type="image/png" href="design/favicon.png" />
+  <link rel="icon" type="image/png" href="design/Favicon.png" />
 
 
 </head>
@@ -22,7 +22,7 @@
 <body>
 
   <header>
-      <img src="design/banner.png" alt="Banniere">
+      <img src="design/banner2.png" alt="Banniere">
 
 
       <div class="navbar">
@@ -39,16 +39,12 @@
       </div>
   </header>
 
-  <button onclick="window.location.href = 'Login.view.php';" class="LOGIN" type="button" name="button">LOGIN </button>
+  <button onclick="window.location.href = '../admin/index.php';" class="LOGIN" type="button" name="button">LOGIN </button>
 
   <h1>Best Sellers !</h1>
 
 
 <div class="centre">
-
-      <div class="Column">
-        <a href="https://www.farming-simulator.com/">  <img src="design/RightAdd.jpg" alt="Farming Simulator Add" style = "width:100%; height : 100%;"> </a>
-      </div>
 
       <div class="Slider">
 
@@ -64,15 +60,15 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="design/tractor1.jpg" alt="Tractor1" style="width:100%;">
+              <img src="design/waffle1.jpg" alt="Tractor1" style="width:100%;">
             </div>
 
             <div class="item">
-              <img src="design/tractor2.jpg" alt="Tractor2" style="width:100%;">
+              <img src="design/waffle2.jpg" alt="Tractor2" style="width:100%;">
             </div>
 
             <div class="item">
-              <img src="design/tractor3.jpg" alt="Tractor 3" style="width:100%;">
+              <img src="design/waffle3.jpg" alt="Tractor 3" style="width:100%;">
             </div>
           </div>
 
@@ -88,11 +84,6 @@
         </div>
 
       </div>
-
-      <div class="Column">
-        <a href="https://eurotrucksimulator2.com/">  <img src="design/LeftAdd.jpg" alt="Euro Truck Simulator Add" style = "width:100%; height : 100%;"> </a>
-      </div>
-
 </div>
 
 </body>

@@ -1,8 +1,8 @@
 
 <?php
 session_start();
-$id=$_POST['id'];
-$mdp=$_POST['mdp'];
+$id=$_POST['uname'];
+$mdp=$_POST['psw'];
 
   if (($id == "test@gmail.com") AND ($mdp == "test")){ // Si le mot de passe et l'id est bon
 

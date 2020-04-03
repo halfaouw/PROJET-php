@@ -12,7 +12,7 @@
 
   <div class="container">
     <label for="uname"><b>Pseudo ou email</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="email" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Mot de passe</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
@@ -25,6 +25,6 @@
 
   <div class="container" style="background-color:#f1f1f1">
     <button onclick="window.location.href = 'Waffle.view.php';" class="cancelbtn">Annuler</button>
-    <span class="psw"><a href="#">Mot de passe oublié ?</a></span>
+    <span class="psw"><a href="#">Mot de passe oublié?</a></span>
   </div>
 </form>
