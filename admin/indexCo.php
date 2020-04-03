@@ -15,6 +15,5 @@
   <button type="submit">Se connecter</button>
   <div class="container" style="background-color:#f1f1f1">
     <button onclick="window.location.href = '../vue/Waffle.view.php';" class="cancelbtn">Annuler</button>
-    <span class="psw"><a href="#">Mot de passe oublié?</a></span>
   </div>
 </form>
