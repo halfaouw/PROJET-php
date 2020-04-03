@@ -11,7 +11,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="icon" type="image/png" href="design/favicon.png" />
+  <link rel="icon" type="image/png" href="design/Favicon.png" />
 
 
 
@@ -22,16 +22,16 @@
 <body>
 
   <header>
-      <img src="design/banner.png" alt="Banniere">
+      <img src="design/banner2.png" alt="Banniere">
 
 
       <div class="navbar">
           <ul>
-            <li><a href="Waffle.view.php">Home</a></li>
-            <li><a href="#" aria-haspopup="true">Shop</a>
+            <li><a href="Waffle.view.php">Accueil</a></li>
+            <li><a href="#" aria-haspopup="true">Magasin</a>
               <ul class="dropdown" aria-label="submenu">
-                <li><a href="Shop.view.php">Tractors</a></li>
-                <li><a href="Kitform.view.php">Kitform</a></li>
+                <li><a href="Shop.view.php">Sucré</a></li>
+                <li><a href="Sale.view.php">Salé</a></li>
               </ul>
             </li>
             <li><a href="https://valatria.createaforum.com/">Forum</a></li>
@@ -39,16 +39,15 @@
       </div>
   </header>
 
-  <button onclick="window.location.href = 'Login.view.php';" class="LOGIN" type="button" name="button">LOGIN </button>
+  <button onclick="window.location.href = '../admin/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
+  <button onclick="window.location.href = '../admin/indexInsc.php';" class="SIGNIN" type="button" >S'inscrire</button>
 
 
 
 
 
-    <h2>ABOUT US </h2>
-    <p> Our site is specialized in the sale of tractors and their spare parts. Our customers have the choice between choosing an already existing tractor ,
-       or designing their own according to their tastes and needs </p>
-    <p>10 000 Tractors Sold</p>
+    <h2>Qui sommes-nous ? </h2>
+    <p> Notre site est  spécialisé dans la vente de gaufres, regardez nos catalogues, choisissez ce qui vous fait envie , passez votre commande et elles vous serons livrées . </p>
   </body>
 
 
@@ -58,8 +57,8 @@
     <div class="footer">
 
       <ul>
-        <li><a href="AboutUs.view.php">About us </a></li>
-        <li><a href="feedback.view.php">Feedback</a></li>
+        <li><a href="AboutUs.view.php">Qui sommes-nous ?</a></li>
+        <li><a href="feedback.view.php">Avis</a></li>
       </ul>
 
     <a href="https://www.facebook.com/" class="fa fa-facebook"></a>

@@ -1,8 +1,7 @@
 CREATE TABLE inscrits(
-  id INTEGER PRIMARY KEY,
   nom TEXT NOT NULL,
   prenom TEXT NOT NULL,
-  email TEXT NOT NULL UNIQUE,
+  email TEXT NOT NULL UNIQUE PRIMARY KEY,
   mdp TEXT NOT NULL UNIQUE
 );
 
@@ -14,9 +13,9 @@ CREATE TABLE articles(
 );
 
 CREATE TABLE panier(
-  id INTEGER,
+  email INTEGER,
   referenceP INTEGER,
   nbArticles INTEGER,
   total FLOAT,
-  FOREIGN KEY(id) REFERENCES inscrits(id)
+  FOREIGN KEY(email) REFERENCES inscrits(email)
 );

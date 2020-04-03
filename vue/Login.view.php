@@ -6,7 +6,7 @@
     <title></title>
 
 
- <link rel="icon" type="image/png" href="design/favicon.png" />
+ <link rel="icon" type="image/png" href="design/Favicon.png" />
 
 
 
