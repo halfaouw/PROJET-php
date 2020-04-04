@@ -109,16 +109,17 @@ session_start();
             if (isset($_POST['ok'])){
               echo "vous avez validé";
 
-              $dbSupp = new articleDB();
-
-              if(!$dbSupp){
-                 echo $dbSupp->lastErrorMsg();
-              }
-              // else {
-              //    echo "Base de données ouverte \n";
+              // $dbSupp = new articleDB();
+              //
+              // if(!$dbSupp){
+              //    echo $dbSupp->lastErrorMsg();
               // }
-                 $sql ="DELETE FROM articles WHERE ref='"$_POST['ref']"';";
-                 $ret = $dbSupp->exec($sql);
+              // // else {
+              // //    echo "Base de données ouverte \n";
+              // // }
+              //    $sql ="DELETE FROM articles WHERE ref ='".$_POST['ref']."'";
+              //    $ret = $dbSupp->exec($sql);
+
           }
 
         // $db = new articleDB();
