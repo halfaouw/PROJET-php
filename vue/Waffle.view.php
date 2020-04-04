@@ -40,7 +40,7 @@
   </header>
 
   <button onclick="window.location.href = '../admin/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
-  <button onclick="window.location.href = '../admin/indexInsc.php';" class="SIGNIN" type="button" >S'inscrire</button>
+  <button onclick="window.location.href = '../admin/inscription.php';" class="SIGNIN" type="button" >S'inscrire</button>
 
 
   <h1>Meilleurs ventes </h1>

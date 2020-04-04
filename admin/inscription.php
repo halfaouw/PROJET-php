@@ -1,33 +1,34 @@
 <?php
+session_start();
 if(isset($_POST['name'])){
-  if($_POST['name'] !=""){
-    class MyDB extends SQLite3
-    {
-       function __construct()
-       {
-          $this->open('../BDD/test.db');
-       }
-    }
-    $db = new MyDB();
-    if(!$db){
-       echo $db->lastErrorMsg();
-    }
-    // else {
-    //    echo "Base de données ouverte \n";
-    // }
-
-       $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
-
-
-
-       $ret = $db->exec($sql);
-       if(!$ret){
-          echo $db->lastErrorMsg();}
-       //  else {
-       //    echo "inscription réussie\n";
-       // }
-       $db->close();
+if($_POST['name'] !=""){
+  class MyDB extends SQLite3
+  {
+     function __construct()
+     {
+        $this->open('../BDD/test.db');
+     }
   }
+  $db = new MyDB();
+  if(!$db){
+     echo $db->lastErrorMsg();
+  }
+  // else {
+  //    echo "Base de données ouverte \n";
+  // }
+
+     $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
+
+
+
+     $ret = $db->exec($sql);
+     if(!$ret){
+        echo $db->lastErrorMsg();}
+     //  else {
+     //    echo "inscription réussie\n";
+     // }
+     $db->close();
+}
 }
 
 ?>
@@ -66,6 +67,7 @@ if(isset($_POST['name'])){
       <input type="password" name="pwd" placeholder="Entrez votre mot de passe" required>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
+
     <form action="../vue/Waffle.view.php" >
         <button class="cancelbtn">Retour à la page d'accueil</button>
     </form>
