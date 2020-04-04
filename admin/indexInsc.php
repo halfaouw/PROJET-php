@@ -1,34 +1,33 @@
 <?php
-session_start();
 if(isset($_POST['name'])){
-if($_POST['name'] !=""){
-  class MyDB extends SQLite3
-  {
-     function __construct()
-     {
-        $this->open('../BDD/test.db');
-     }
+  if($_POST['name'] !=""){
+    class MyDB extends SQLite3
+    {
+       function __construct()
+       {
+          $this->open('../BDD/test.db');
+       }
+    }
+    $db = new MyDB();
+    if(!$db){
+       echo $db->lastErrorMsg();
+    }
+    // else {
+    //    echo "Base de données ouverte \n";
+    // }
+
+       $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
+
+
+
+       $ret = $db->exec($sql);
+       if(!$ret){
+          echo $db->lastErrorMsg();}
+       //  else {
+       //    echo "inscription réussie\n";
+       // }
+       $db->close();
   }
-  $db = new MyDB();
-  if(!$db){
-     echo $db->lastErrorMsg();
-  }
-  // else {
-  //    echo "Base de données ouverte \n";
-  // }
-
-     $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
-
-
-
-     $ret = $db->exec($sql);
-     if(!$ret){
-        echo $db->lastErrorMsg();}
-     //  else {
-     //    echo "inscription réussie\n";
-     // }
-     $db->close();
-}
 }
 
 ?>

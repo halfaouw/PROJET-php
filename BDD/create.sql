@@ -7,10 +7,12 @@ CREATE TABLE inscrits(
 );
 
 CREATE TABLE articles(
-  type TEXT,
   nom TEXT NOT NULL,
-  prix INTEGER,
-  def TEXT NOT NULL
+  complement TEXT,
+  prix FLOAT NOT NULL,
+  ref TEXT NOT NULL,
+  categorie STRING NOT NULL,
+  photo STRING
 );
 
 CREATE TABLE panier(
