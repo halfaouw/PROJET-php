@@ -5,11 +5,10 @@
     include_once("../framework/view.class.php");
 
     // Inclusion du modèle
-    require_once("../model/DAO.class.php");
-    require_once('../admin/article.php');
+    include_once("../model/admin.php");
 
     // Creation de l'unique objet DAO
-    $dao = new DAO();
+    $db = new articleDB();
 
     ///////////////////////////////////////////////////////
     //  A COMPLETER
@@ -35,14 +34,10 @@
 
     // Si la catégorie est non nulle, calcule le chemin et le passe à la vue
     // Si une categorie est définie
-    if ($categorie != 0) {
-      $cat = $dao->getCat($categorie);
-      $view->assign('categoryPath',$cat->getPath());
-    }
 
     // Note la référence du premier et dernier article affiché
-    $firstRef = $articles[0]->getRef();
-    $lastRef = end($articles)->getRef();
+    //$firstRef = $articles[0]->getRef();
+    //$lastRef = end($articles)->getRef();
 
     // Calcule la référence qui suit le dernier article
     $nextRef = $dao->next($lastRef);
@@ -62,7 +57,7 @@
     // Passe le résultat à la vue
     $view->assign('prevRef',$prevRef);
 
-  //$view->dump();
+    //$view->dump();
 
     // Charge la vue
     $view->display("articles.view.php")
