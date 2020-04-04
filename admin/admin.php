@@ -163,6 +163,7 @@ session_start();
   }
 ?>
 <?php
+
     $bdd = new PDO('sqlite:../BDD/test.db');
     $articles = $bdd->query("SELECT * FROM articles");
 
