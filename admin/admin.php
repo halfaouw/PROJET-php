@@ -109,26 +109,26 @@ session_start();
             header('Location: index.php');
           }else {
             if (isset($_POST['ok'])){
-              // echo "vous avez validé";
+              echo "vous avez validé";
 
               $dbSupp = new articleDB();
 
               if(!$dbSupp){
                  echo $dbSupp->lastErrorMsg();
               }
-              // else {
-              //    echo "Base de données ouverte \n";
-              // }
+              else {
+                 echo "Base de données ouverte \n";
+              }
                  $sql ="DELETE FROM articles WHERE ref ='".$_POST['ref']."'";
-
+                 $ret = $dbSupp->exec($sql);
 
                  $ret = $dbSupp->exec($sql);
                  if(!$ret){
-                    echo $dbsupp->lastErrorMsg();}
+                    echo $dbSupp->lastErrorMsg();}
                   else {
-                    echo "suppression d'articles ok\n";
+                    echo "Suppression d'article ok\n";
                  }
-                 $dbSupp->close();
+                 $db->close();
 
           }
 
@@ -145,17 +145,18 @@ session_start();
         }
 
         //header('Location: supprimer-article.php');
+        echo '      <form class="" action="" method="post">
+                <h1>Supprimer un article</h1>
+
+              <label for="ref">Référence du produit:</label>
+              <input type="number" name="ref" id="ref" required/><br/>
+
+              <input type="submit" value="Valider "name="ok" />
+              </form>';
       }
       ?>
 
-      <form class="" action="" method="post">
-        <h1>Supprimer un article</h1>
 
-      <label for="ref">Référence du produit:</label>
-      <input type="number" name="ref" id="ref" required/><br/>
-
-      <input type="submit" value="Valider "name="ok" />
-      </form>
       <?php
     }
   }
