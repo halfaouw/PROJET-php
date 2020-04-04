@@ -6,23 +6,6 @@ session_start();
   else {
     if (isset($_GET['action'])){
 
-      class Article{
-        public $nom;
-        public $complement;
-        public $prix;
-        public $ref;
-        public $categorie;
-        public $photo;
-
-        public function __construct() {
-          $this->nom=$_POST['nom'];
-          $this->complement=$_POST['complement'];
-          $this->prix=$_POST['prix'];
-          $this->ref=$_POST['ref'];
-          $this->categorie=$_POST['categorie'];
-          $this->photo='../vue/design/'.$_POST['photo'];
-        }
-      }
 
               class articleDB extends SQLite3
               {
@@ -98,6 +81,9 @@ session_start();
             <input type="text" name="photo" id="photo" required/><br/>
             <input type="submit" value="Valider "name="ok" />
             </form>
+            <form action="../vue/Waffle.view.php" >
+                <button class="cancelbtn">Retour à la page d'accueil</button>
+            </form>
             <?php
 
 
@@ -153,7 +139,12 @@ session_start();
               <input type="number" name="ref" id="ref" required/><br/>
 
               <input type="submit" value="Valider "name="ok" />
-              </form>';
+              </form>
+              <form action="../vue/Waffle.view.php" >
+                  <button class="cancelbtn">Retour à la page d"accueil</button>
+              </form>
+              ';
+
       }
       ?>
 
@@ -168,14 +159,16 @@ session_start();
     $articles = $bdd->query("SELECT * FROM articles");
 
     foreach ($articles as $article): ?>
-    <article>
-        <h2>Article: <?php echo $article['nom'] ?></h2>
+    <link rel="stylesheet" type="text/css" href="../vue/design/stylesheetShop.css">
+    <link rel="stylesheet" type="text/css" href="../vue/design/Login.css">
+    <div class="article">
+        <h3>Article: <?php echo $article['nom'] ?></h3>
         <p>Complément: <?php echo $article['complement'] ?></p>
         <p>Prix: <?php echo $article['prix'] ?></p>
         <p>Reference: <?php echo $article['ref'] ?></p>
         <p>Catégorie: <?php echo $article['categorie'] ?></p>
         <img src="../vue/design/<?php echo $article['photo'] ?>" alt="photo">
-    </article>
+    </div>
     <?php endforeach ?>
 
 <p>vous êtes connecté <?php echo $_SESSION['pseudo']; ?></p>
@@ -183,3 +176,6 @@ session_start();
 <!--<a href="?action=ajouter"> Modifier un produit</a>
 ça serait parfait de mettre ça sous forme de menu nav ou de boutons-->
 <a href="?action=supprimer"> Modifier ou Supprimer un produit</a>
+<form action="../vue/Waffle.view.php" >
+    <button class="cancelbtn">Retour à la page d'accueil</button>
+</form>

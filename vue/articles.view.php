@@ -7,22 +7,25 @@ echo "$HeadFoot->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
  ?>
 
+
   <button onclick="window.location.href = '../model/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
   <button onclick="window.location.href = '../model/inscription.php';" class="SIGNIN" type="button" >S'inscrire</button>
   <button onclick="window.location.href = '../model/panier.php';" class="panier" type="button" >Panier</button>
 
-<h2>Nos gaufres salées</h2>
-  <?php
-  foreach ($salees as $value) {
-    echo " <div class=\"liste\"> ";
-    $view = $value->getview();
-    echo "$view";
-    echo "  </div>";
-  }
-  ?>
+  <div class="body">
+
+    <h2>Tous nos articles </h2>';
+
+<?php
+foreach ($articles as $value) {
+  echo " <div class=\"liste\"> ";
+  $view = $value->getview();
+  echo "$view";
+  echo "  </div>";
+}
+?>
 
 
-  </div>
 
   <div class="pages">
     <a href="#" class="previous round"><b>&#8249;</b></a>
@@ -41,11 +44,10 @@ echo "$HeadFoot->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
 
 
-
-
-
-
   </body>
+
+
+
 
   <?php
 

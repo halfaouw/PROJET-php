@@ -27,10 +27,7 @@ header img{
 
 
 button.LOGIN{
-  position: absolute;
-  top : 0px;
-  left: 0px;
-  height: 30px;
+  float: left;
   color : #6E4F36;
   border-color: #6E4F36;
   border-radius: 8px;
@@ -39,6 +36,34 @@ button.LOGIN{
 }
 
 button.LOGIN:hover{
+  background-color: #6E4F36;
+  color: rgb(227,248,243);
+  border-color: rgb(227,248,243);
+}
+
+button.SIGNIN{
+  float: right;
+  color : #6E4F36;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: rgb(227,248,243);
+  margin: 10px 20px 20px  10px;
+}
+
+button.SIGNIN:hover{
+  background-color: #6E4F36;
+  color: rgb(227,248,243);
+  border-color: rgb(227,248,243);
+}
+button.panier{
+  float: center;
+  color : #6E4F36;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: rgb(227,248,243);
+  margin: 10px 20px 20px  10px;
+}
+button.panier:hover{
   background-color: #6E4F36;
   color: rgb(227,248,243);
   border-color: rgb(227,248,243);

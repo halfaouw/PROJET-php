@@ -5,7 +5,7 @@
 // sinon on demande à la personne de se présenter.
 
 // Inclus le mini framework
-require_once('../framework/view.class.php');
+require_once('../framework/view.php');
 //require_once('../model/Panier.class.php');
 //require_once('../model/Article.class.php');
 

@@ -30,8 +30,11 @@
             <li><a href="Waffle.view.php">Accueil</a></li>
             <li><a href="#" aria-haspopup="true">Magasin</a>
               <ul class="dropdown" aria-label="submenu">
-                <li><a href="Shop.view.php">Sucré</a></li>
+                <li><a href="articles.view.php">tous les articles</a></li>
+                <li><a href="Classiques.view.php">Classiques</a></li>
                 <li><a href="Sale.view.php">Salé</a></li>
+                <li><a href="waffine.view.php">waffine</a></li>
+
               </ul>
             </li>
             <li><a href="https://valatria.createaforum.com/">Forum</a></li>
@@ -39,8 +42,9 @@
       </div>
   </header>
 
-  <button onclick="window.location.href = '../admin/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
-  <button onclick="window.location.href = '../admin/inscription.php';" class="SIGNIN" type="button" >S'inscrire</button>
+  <button onclick="window.location.href = '../model/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
+  <button onclick="window.location.href = '../model/inscription.php';" class="SIGNIN" type="button" >S'inscrire</button>
+  <button onclick="window.location.href = '../model/panier.php';" class="panier" type="button" >Panier</button>
 
 
 
@@ -58,7 +62,6 @@
 
       <ul>
         <li><a href="AboutUs.view.php">Qui sommes-nous ?</a></li>
-        <li><a href="feedback.view.php">Avis</a></li>
       </ul>
 
     <a href="https://www.facebook.com/" class="fa fa-facebook"></a>

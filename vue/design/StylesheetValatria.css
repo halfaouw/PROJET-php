@@ -59,6 +59,19 @@ button.SIGNIN:hover{
   color: rgb(227,248,243);
   border-color: rgb(227,248,243);
 }
+button.panier{
+  float: center;
+  color : #6E4F36;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: rgb(227,248,243);
+  margin: 10px 20px 20px  10px;
+}
+button.panier:hover{
+  background-color: #6E4F36;
+  color: rgb(227,248,243);
+  border-color: rgb(227,248,243);
+}
 div.centre{
   display: flex;
   justify-content: center ;
