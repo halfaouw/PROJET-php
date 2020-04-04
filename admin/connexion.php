@@ -13,8 +13,23 @@ $mdp=$_POST['psw'];
 
   }
   else{ // Sinon, on affiche un message d'erreur
-
-    echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
+  //   class articleDB extends SQLite3
+  //   {
+  //      function __construct()
+  //      {
+  //         $this->open('../BDD/test.db');
+  //      }
+  //   }
+  //
+  //   $db= new articleDB();
+  //   $verif= $db->query("SELECT mdp FROM inscrits WHERE email= $id");
+  //   if ($verif==$mdp) {
+  //     echo "ok , vous etes connectés";
+  //   }
+  //   else{
+  //   echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
+  // }
+  echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
   }
-$db->close();
+// $db->close();
 ?>
