@@ -5,7 +5,8 @@
     include_once("../framework/view.class.php");
 
     // Inclusion du modèle
-    include_once("../model/DAO.class.php");
+    require_once("../model/DAO.class.php");
+    require_once('../admin/article.php');
 
     // Creation de l'unique objet DAO
     $dao = new DAO();
