@@ -20,7 +20,7 @@ session_start();
           $this->prix=$_POST['prix'];
           $this->ref=$_POST['ref'];
           $this->categorie=$_POST['categorie'];
-          $this->photo='C:/wamp64/www/github/PROJET-php/BDD/img/'.$_POST['photo'];//faudrait mettre autre chose qu'un chemin complet
+          $this->photo='../vue/design/'.$_POST['photo'];//faudrait mettre autre chose qu'un chemin complet
         }
       }
 
@@ -121,14 +121,12 @@ session_start();
               }
                  $sql ="DELETE FROM articles WHERE ref ='".$_POST['ref']."'";
                  $ret = $dbSupp->exec($sql);
-
-                 $ret = $dbSupp->exec($sql);
                  if(!$ret){
                     echo $dbSupp->lastErrorMsg();}
                   else {
                     echo "Suppression d'article ok\n";
                  }
-                 $db->close();
+                 $dbSupp->close();
 
           }
 
@@ -145,7 +143,10 @@ session_start();
         }
 
         //header('Location: supprimer-article.php');
-        echo '      <form class="" action="" method="post">
+        echo '
+        <link rel="stylesheet" type="text/css" href="../vue/design/Login.css">
+        <link rel="icon" type="image/png" href="../vue/design/Favicon.png" />
+          <form class="" action="" method="post">
                 <h1>Supprimer un article</h1>
 
               <label for="ref">Référence du produit:</label>
@@ -161,6 +162,21 @@ session_start();
     }
   }
 ?>
+<?php
+    $bdd = new PDO('sqlite:../BDD/test.db');
+    $articles = $bdd->query("SELECT * FROM articles");
+
+    foreach ($articles as $article): ?>
+    <article>
+        <h2>Article: <?php echo $article['nom'] ?></h2>
+        <p>Complément: <?php echo $article['complement'] ?></p>
+        <p>Prix: <?php echo $article['prix'] ?></p>
+        <p>Reference: <?php echo $article['ref'] ?></p>
+        <p>Catégorie: <?php echo $article['categorie'] ?></p>
+        <img src="../vue/design/<?php echo $article['photo'] ?>" alt="photo">
+    </article>
+    <?php endforeach ?>
+
 <p>vous êtes connecté <?php echo $_SESSION['pseudo']; ?></p>
 <a href="?action=ajouter"> Ajouter un produit</a>
 <!--<a href="?action=ajouter"> Modifier un produit</a>
