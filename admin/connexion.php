@@ -14,22 +14,33 @@ $mdp=$_POST['psw'];
   }
   else{ // Sinon, on affiche un message d'erreur
   //   class articleDB extends SQLite3
-  //   {
-  //      function __construct()
-  //      {
-  //         $this->open('../BDD/test.db');
-  //      }
-  //   }
-  //
-  //   $db= new articleDB();
-  //   $verif= $db->query("SELECT mdp FROM inscrits WHERE email= $id");
-  //   if ($verif==$mdp) {
-  //     echo "ok , vous etes connectés";
-  //   }
-  //   else{
-  //   echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
-  // }
-  echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
+  $maildebut = substr($id, 0, strpos($id, "@"));
+  $mailfin = substr($id, strpos($id, "@")+1, strlen($id));
+
+
+  class usersDB extends SQLite3
+  {
+     function __construct()
+     {
+        $this->open('../BDD/test.db');
+     }
   }
+      $db = new userseDB();
+      $result = $db->query("SELECT mdp FROM inscrits WHERE email ='".$maildebut."@".$mailfin."'".';');
+      $verifMDP = $result->fetchArray();
+      var_dump($verifMDP[0]);
+
+      if ($verifMDP[0] == $mdp){
+        echo "OK , vous etes connecté";
+      }
+      else {
+        echo "identifiant ou mot de passe incorrecte";
+      }
+
+    }
+
+  //
+  // echo '<p><strong> Mot de passe ou identifiant incorrect </strong></p>';
+  // }
 // $db->close();
 ?>

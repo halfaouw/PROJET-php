@@ -1,21 +1,24 @@
 <?php
 session_start();
+
 if(isset($_POST['name'])){
+  $id=$_POST['email'];
 if($_POST['name'] !=""){
-  class MyDB extends SQLite3
+
+  class usersDB extends SQLite3
   {
      function __construct()
      {
         $this->open('../BDD/test.db');
      }
   }
-  $db = new MyDB();
+  $db = new usersDB();
   if(!$db){
      echo $db->lastErrorMsg();
   }
-  // else {
-  //    echo "Base de données ouverte \n";
-  // }
+  else {
+     echo "Base de données ouverte \n";
+  }
     // $test="SELECT * FROM incrits WHERE email='".$_POST['email'].";'";
     // if ($test != NULL){
     //   $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
@@ -24,26 +27,34 @@ if($_POST['name'] !=""){
     //   echo'Un compte avec ce mail existe déja'
     // }
 
-    $test= 'SELECT COUNT(*) from inscrits where email="'.$_POST["email"].'";';
-    $ret = $db->exec($test);
+    $maildebut = substr($id, 0, strpos($id, "@"));
+    $mailfin = substr($id, strpos($id, "@")+1, strlen($id));
 
-    $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
 
-    if($test != 0){
-      exit('Ce compte existe déja veuillez vous connecter');
-      $suppr = 'DELETE FROM inscrits WHERE email="'.$_POST["email"].'";';
-      $ret = $db->exec($suppr);
+    $test = $db->query("SELECT email FROM inscrits WHERE email ='".$maildebut."@".$mailfin."'".';');
+    $verifMail = $test->fetchArray();
+    var_dump($verifMail[0]);
+
+    if($verifMail[0]== $id){
+      echo"ce compte existe déja , veuillez vous connecter";
+    }
+    else{
+      $sql ="INSERT INTO inscrits (nom,prenom,email,mdp)"."\n"."VALUES ('".$_POST['name']."', '".$_POST['username']."', '".$_POST['email']."', '".$_POST['pwd']."');";
+
+
+       $ret = $db->exec($sql);
+       if(!$ret){
+          echo $db->lastErrorMsg();}
+       //  else {
+       //    echo "inscription réussie\n";
+       // }
+       $db->close();
     }
 
-     $ret = $db->exec($sql);
-     if(!$ret){
-        echo $db->lastErrorMsg();}
-     //  else {
-     //    echo "inscription réussie\n";
-     // }
-     $db->close();
+
 }
 }
+
 
 ?>
 
