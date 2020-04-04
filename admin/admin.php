@@ -20,7 +20,7 @@ session_start();
           $this->prix=$_POST['prix'];
           $this->ref=$_POST['ref'];
           $this->categorie=$_POST['categorie'];
-          $this->photo='../vue/design/'.$_POST['photo'];//faudrait mettre autre chose qu'un chemin complet
+          $this->photo='../vue/design/'.$_POST['photo'];
         }
       }
 
