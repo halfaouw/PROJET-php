@@ -63,13 +63,15 @@ session_start();
                  $ret = $db->exec($sql);
                  if(!$ret){
                     echo $db->lastErrorMsg();}
-                 //  else {
-                 //    echo "inscription réussie\n";
-                 // }
+                  else {
+                    echo "ajout d'articles ok\n";
+                 }
                  $db->close();
             }
           }
             ?>
+            <link rel="stylesheet" type="text/css" href="../vue/design/Login.css">
+            <link rel="icon" type="image/png" href="../vue/design/Favicon.png" />
 
             <form class="" action="" method="post">
             <label for="nom">Nom du produit:</label>
@@ -107,18 +109,26 @@ session_start();
             header('Location: index.php');
           }else {
             if (isset($_POST['ok'])){
-              echo "vous avez validé";
+              // echo "vous avez validé";
 
-              // $dbSupp = new articleDB();
-              //
-              // if(!$dbSupp){
-              //    echo $dbSupp->lastErrorMsg();
+              $dbSupp = new articleDB();
+
+              if(!$dbSupp){
+                 echo $dbSupp->lastErrorMsg();
+              }
+              // else {
+              //    echo "Base de données ouverte \n";
               // }
-              // // else {
-              // //    echo "Base de données ouverte \n";
-              // // }
-              //    $sql ="DELETE FROM articles WHERE ref ='".$_POST['ref']."'";
-              //    $ret = $dbSupp->exec($sql);
+                 $sql ="DELETE FROM articles WHERE ref ='".$_POST['ref']."'";
+
+
+                 $ret = $dbSupp->exec($sql);
+                 if(!$ret){
+                    echo $dbsupp->lastErrorMsg();}
+                  else {
+                    echo "suppression d'articles ok\n";
+                 }
+                 $dbSupp->close();
 
           }
 
