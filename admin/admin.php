@@ -117,7 +117,7 @@ session_start();
               // else {
               //    echo "Base de données ouverte \n";
               // }
-                 $sql ="DELETE FROM articles WHERE reference='$_ref';";
+                 $sql ="DELETE FROM articles WHERE ref='"$_POST['ref']"';";
                  $ret = $dbSupp->exec($sql);
           }
 
