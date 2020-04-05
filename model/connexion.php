@@ -25,13 +25,16 @@ $mdp=$_POST['psw'];
         $this->open('../BDD/test.db');
      }
   }
-      $db = new userseDB();
+      $db = new usersDB();
       $result = $db->query("SELECT mdp FROM inscrits WHERE email ='".$maildebut."@".$mailfin."'".';');
       $verifMDP = $result->fetchArray();
       var_dump($verifMDP[0]);
 
       if ($verifMDP[0] == $mdp){
         echo "OK , vous etes connecté";
+        echo '<form action="../vue/Waffle.view.php" >
+            <button class="cancelbtn">Retour à la page d"accueil</button>
+        </form>'; 
       }
       else {
         echo "identifiant ou mot de passe incorrecte";

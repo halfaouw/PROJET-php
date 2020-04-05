@@ -9,7 +9,7 @@ echo "$HeadFoot->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
   <button onclick="window.location.href = '../model/indexCo.php';" class="LOGIN" type="button">Se connecter</button>
   <button onclick="window.location.href = '../model/inscription.php';" class="SIGNIN" type="button" >S'inscrire</button>
-  <button onclick="window.location.href = '../model/panier.php';" class="panier" type="button" >Panier</button>
+  <button onclick="window.location.href = '../controleur/panier.ctrl.php';" class="panier" type="button" >Panier</button>
 
 
   <h1>Meilleurs ventes </h1>
