@@ -14,13 +14,5 @@
 
     $viewArticles = new view('articles.view.php');
     $viewArticles-> assign('articles',$articles);
-    $viewArticles -> display('articles.view.php')
-
-
-    // $waffine=$db ->getWaffine();
-    //
-    // $viewWaffine = new view('waffine.view.php');
-    // $viewWaffine-> assign('waffine',$waffine);
-    // $viewWaffine -> display('waffine.view.php')
-
+    $viewArticles -> display('articles.view.php');
     ?>

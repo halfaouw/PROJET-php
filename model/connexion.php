@@ -32,6 +32,9 @@ $mdp=$_POST['psw'];
 
       if ($verifMDP[0] == $mdp){
         echo "OK , vous etes connecté";
+        echo '<form action="../vue/Waffle.view.php" >
+            <button class="cancelbtn">Retour à la page d"accueil</button>
+        </form>'; 
       }
       else {
         echo "identifiant ou mot de passe incorrecte";
