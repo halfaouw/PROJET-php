@@ -7,7 +7,7 @@ $mdp=$_POST['psw'];
 //   if ($mdp == $sql){
 
   if (($id == "test@gmail.com") AND ($mdp == "test")){ // Si le mot de passe et l'id est bon
-    $_SESSION['pseudo']=$id;
+    $_SESSION['uname']=$id;
     //echo '<p><strong> Connexion réussie! </strong></p>';
     header('Location: admin.php');
 
@@ -25,7 +25,7 @@ $mdp=$_POST['psw'];
         $this->open('../BDD/test.db');
      }
   }
-      $db = new userseDB();
+      $db = new usersDB();
       $result = $db->query("SELECT mdp FROM inscrits WHERE email ='".$maildebut."@".$mailfin."'".';');
       $verifMDP = $result->fetchArray();
       var_dump($verifMDP[0]);
